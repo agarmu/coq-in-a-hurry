@@ -64,4 +64,11 @@ Proof.
     Qed.
 
 
-    
+Lemma flatten_size : forall t, size (flatten t) = size t.
+Proof.
+  intros t.
+  induction t.
+  simpl. reflexivity.
+  simpl. rewrite flatten_aux_size.
+  rewrite IHt2. ring.
+  Qed.
