@@ -1,4 +1,4 @@
 #!/bin/bash
 
-eval $(opam env --switch=coq-8-19-2) && codium .
+eval $(opam env --switch=coq) && codium .
 
